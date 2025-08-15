@@ -11,7 +11,7 @@ LowBots is a tool created by **Loweez** and their studio **LVZ Studios** to gene
 ## Dependency
 
 - Windows 10 or higher
-- No need to install Python; the bot is distributed as a standalone `.exe`
+- Python
 - Discord bot token
 
 ## Setup
