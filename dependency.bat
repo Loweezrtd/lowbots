@@ -10,7 +10,6 @@ echo Created by Loweez / LVZ Studios
 echo ==========================================
 echo.
 
-REM Cambiar al directorio donde está este .bat
 cd /d "%~dp0"
 
 echo Checking Python installation...
