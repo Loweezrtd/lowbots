@@ -1,8 +1,17 @@
 @echo off
 REM ==========================================
-REM LowBots Full Dependency Installer
+REM LowBots Full Dependency Installer (Silent)
 REM Created by Loweez / LVZ Studios
 REM ==========================================
+
+echo ==========================================
+echo LowBots Full Dependency Installer (Silent)
+echo Created by Loweez / LVZ Studios
+echo ==========================================
+echo.
+
+REM Cambiar al directorio donde está este .bat
+cd /d "%~dp0"
 
 echo Checking Python installation...
 python --version >nul 2>&1
@@ -16,10 +25,14 @@ IF ERRORLEVEL 1 (
 
 echo.
 echo Installing required packages...
-pip install --upgrade pip
-pip install discord.py
-pip install python-dotenv
-pip install chat-exporter
+
+REM Upgrade pip silently
+python -m pip install --upgrade pip >nul 2>&1
+
+REM Install packages silently
+python -m pip install discord.py >nul 2>&1
+python -m pip install python-dotenv >nul 2>&1
+python -m pip install chat-exporter >nul 2>&1
 
 echo.
 echo All dependencies installed successfully!
